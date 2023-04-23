@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace VistulaProjekt2
 {
-    internal class HeroGorup
+    internal class HeroGorup : ICloneable
     {
-        public HeroGorup()
+        private string groupName;
+        public string GroupName
+        {
+            get { return groupName; }set { groupName = value; }
+        }
+        public HeroGorup(string name, List<Hero> group)
+        {
+            this.groupName = name;
+
+        }
+
+        public object Clone()
         {
 
+            return null;
         }
     }
 }
