@@ -16,6 +16,11 @@
             foo.AddMember(hero1);
             foo.AddMember(hero2);
             foo.AddMember(hero3);
+            foo.AddMember(hero4);
+            foo.AddMember(hero5);
+            foo.AddMember(hero6);
+            Console.WriteLine(foo[0].ToString());
+            foo[0].ModifyHeroHealth(0);
             Console.WriteLine(foo.ToString());
             Console.WriteLine(foo.AllAttackInfo());
             Console.WriteLine(foo[0].ToString());

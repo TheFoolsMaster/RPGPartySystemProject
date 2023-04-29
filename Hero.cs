@@ -40,7 +40,7 @@ namespace VistulaProjekt2
             this.heroHealth = heroHealth;
             this.heroStrenght = heroStrenght;
         }
-        protected void ModifyHeroHealth (int value)
+        public void ModifyHeroHealth (int value)
         {
             if (heroHealth < 0)
                 heroHealth = 0;

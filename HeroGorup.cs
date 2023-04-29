@@ -57,7 +57,6 @@ namespace VistulaProjekt2
 
                 if (i+1 != group.Count)
                     peeps += ", ";
-
             }
             return $"Group name: {GroupName}, party attack power: {AllAttackInfo()}, party members: {peeps}";
         }
