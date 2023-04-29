@@ -55,7 +55,7 @@ namespace VistulaProjekt2
         }
         public override string ToString()
         {
-            return $"{heroName},{heroHealth},{heroStrenght}";
+            return $"{heroName},{heroHealth}%,{heroStrenght}";
         }
     }
 }

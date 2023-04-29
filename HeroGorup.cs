@@ -41,12 +41,23 @@ namespace VistulaProjekt2
             clone.group = group;
             return clone;
         }
+        public Hero this[int key]
+        {
+            get { return group[key]; }
+            set { group[key] = value; }
+        }
+
         public override string ToString()
         {
             string peeps=""; 
-            foreach (var hero in group)
+
+            for (int i=0; i<group.Count; i++)
             {
-                peeps += hero.HeroName + " ";
+                peeps += group[i].HeroName;
+
+                if (i+1 != group.Count)
+                    peeps += ", ";
+
             }
             return $"Group name: {GroupName}, party attack power: {AllAttackInfo()}, party members: {peeps}";
         }
