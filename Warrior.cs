@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VistulaProjekt2
 {
-    internal class Warrior : Hero, ICloneable
+    internal class Warrior : Hero
     {
         public Warrior(string heroName, int heroHealth, int heroStrenght) : base(heroName, heroHealth, heroStrenght)
         {

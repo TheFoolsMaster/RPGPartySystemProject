@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VistulaProjekt2
 {
-    internal class Initials : Hero, ICloneable
+    internal class Initials : Hero
     {
         private int age;
         public int Age
@@ -27,10 +27,6 @@ namespace VistulaProjekt2
         public override string ToString()
         {
             return base.ToString() + $"{age}";
-        }
-        public new object Clone()
-        {
-            return MemberwiseClone();
         }
     }
 }
