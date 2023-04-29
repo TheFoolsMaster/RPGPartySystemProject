@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VistulaProjekt2
 {
-    abstract class Hero
+    abstract class Hero : ICloneable
     {
         #region Properites
 
@@ -37,17 +37,20 @@ namespace VistulaProjekt2
         protected Hero(string heroName, int heroHealth, int heroStrenght)
         {
             this.heroName = heroName;
-            this.heroHealth = heroHealth;
+            if (heroHealth < 0)
+                this.heroHealth = 0;
+            else if (heroHealth > 100)
+                this.heroHealth = 100;
             this.heroStrenght = heroStrenght;
         }
-        public void ModifyHeroHealth (int value)
+        public int ModifyHeroHealth (int value)
         {
             if (heroHealth < 0)
-                heroHealth = 0;
+                return heroHealth = 0;
             else if (heroHealth > 100)
-                heroHealth = 100;
+                return heroHealth = 100;
             else
-                heroHealth += value;
+                return heroHealth += value;
         }
         public virtual int AttackPower()
         {
@@ -56,6 +59,11 @@ namespace VistulaProjekt2
         public override string ToString()
         {
             return $"{heroName},{heroHealth}%,{heroStrenght}";
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }

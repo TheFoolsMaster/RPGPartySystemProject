@@ -20,14 +20,30 @@
             foo.AddMember(hero5);
             foo.AddMember(hero6);
             Console.WriteLine(foo[0].ToString());
-            foo[0].ModifyHeroHealth(0);
+            Console.WriteLine(foo[0].ModifyHeroHealth(0));
             Console.WriteLine(foo.ToString());
             Console.WriteLine(foo.AllAttackInfo());
             Console.WriteLine(foo[0].ToString());
-            foo[0].HeroName = "Gerwazy";
+
+
+            Console.WriteLine(  );
+            Console.WriteLine(foo[0].ToString());
             HeroGorup fooClone = (HeroGorup)foo.Clone();
+            fooClone[0].HeroName = "Gerwazy";
+            Console.WriteLine(fooClone[0].ToString());
+
+            fooClone[0].HeroName = "Arn";
             Console.WriteLine(foo[0].ToString());
             Console.WriteLine(fooClone[0].ToString());
+            Console.WriteLine(  );
+            Console.WriteLine(foo.ToString());
+            Console.WriteLine(fooClone.ToString());
+
+
+
+            foo.lootest = 4214;
+            Console.WriteLine(foo.lootest);
+            Console.WriteLine(fooClone.lootest);
         }
     }
 }

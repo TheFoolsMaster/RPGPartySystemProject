@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VistulaProjekt2
 {
-    internal class Wizard : Hero
+    internal class Wizard : Hero, ICloneable
     {
         private int mana;
         public int Mana
@@ -32,6 +32,10 @@ namespace VistulaProjekt2
         public override string ToString()
         {
             return base.ToString()+$"{mana}";
+        }
+        public new object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }
