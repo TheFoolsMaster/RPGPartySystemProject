@@ -16,6 +16,8 @@
             Console.WriteLine(hero2);
             Console.WriteLine(hero3);
             Console.WriteLine(hero4);
+            hero4.ModifyHeroHealth(62);
+            Console.WriteLine(hero4);
             Console.WriteLine(hero5);
             Console.WriteLine(hero6);
 
@@ -27,6 +29,18 @@
             foo.AddMember(hero4);
             foo.AddMember(hero5);
             foo.AddMember(hero6);
+
+            foo[3].ModifyHeroHealth(-62);
+            Console.WriteLine(foo.ToString());
+
+
+
+
+
+
+
+
+
             Console.WriteLine( );
             Console.WriteLine(hero2);
             Console.WriteLine((Wizard)hero2);
@@ -41,6 +55,7 @@
             Console.WriteLine(  );
             Console.WriteLine(foo[0].ToString());
             HeroGorup fooClone = (HeroGorup)foo.Clone();
+            foo[0].ModifyHeroHealth(-98);
             fooClone[0].HeroName = "Gerwazy";
             Console.WriteLine(fooClone[0].ToString());
 
@@ -56,6 +71,8 @@
             foo.lootest = 4214;
             Console.WriteLine(foo.lootest);
             Console.WriteLine(fooClone.lootest);
+
+
         }
     }
 }

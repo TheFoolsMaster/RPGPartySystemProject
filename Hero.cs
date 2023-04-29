@@ -37,28 +37,25 @@ namespace VistulaProjekt2
         protected Hero(string heroName, int heroHealth, int heroStrenght)
         {
             this.heroName = heroName;
-            if (heroHealth < 0)
-                this.heroHealth = 0;
-            else if (heroHealth > 100)
-                this.heroHealth = 100;
+            this.heroHealth = heroHealth;
             this.heroStrenght = heroStrenght;
         }
         public int ModifyHeroHealth (int value)
         {
-            if (heroHealth < 0)
-                return heroHealth = 0;
-            else if (heroHealth > 100)
-                return heroHealth = 100;
+            if (HeroHealth+value < 0)
+                return HeroHealth = 0;
+            else if (HeroHealth + value > 100)
+                return HeroHealth = 100;
             else
-                return heroHealth += value;
+                return HeroHealth += value;
         }
         public virtual int AttackPower()
         {
-            return heroHealth*heroStrenght;
+            return (HeroHealth*HeroStrenght);
         }
         public override string ToString()
         {
-            return $"{heroName},{heroHealth}%,{heroStrenght}";
+            return $"{heroName},{heroHealth}%,{AttackPower()}";
         }
 
         public object Clone()

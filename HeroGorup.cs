@@ -49,10 +49,15 @@ namespace VistulaProjekt2
 
             //group = new List<Hero>(this.group.Count);
 
-            this.group.ForEach((item) =>
+            foreach(var hero in this.group)
             {
-                clone.group.Add((Hero)item.Clone());
-            });
+                clone.group.Add((Hero)hero.Clone());
+            }
+
+            //this.group.ForEach((item) =>
+            //{
+            //    clone.group.Add((Hero)item.Clone());
+            //});
 
 
             return clone;

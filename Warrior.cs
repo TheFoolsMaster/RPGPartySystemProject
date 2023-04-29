@@ -13,16 +13,16 @@ namespace VistulaProjekt2
         }
         public Warrior()
         {
-            heroName = "Geralt";
-            heroHealth = 100;
-            heroStrenght = random.Next(0, 3 * 6 + 1);
+            HeroName = "Geralt";
+            HeroHealth = 100;
+            HeroStrenght = random.Next(0, 3 * 6 + 1);
         }
         public override int AttackPower()
         {
-            if (heroHealth < 5)
-                return heroStrenght;
+            if (HeroHealth < 5)
+                return HeroStrenght;
             else
-                return heroStrenght * heroHealth;
+                return HeroHealth * HeroStrenght;
         }
         public override string ToString()
         {
