@@ -26,7 +26,7 @@ namespace VistulaProjekt2
         }
         public override string ToString()
         {
-            return base.ToString() + $"{age}";
+            return base.ToString() + $",{Age}";
         }
     }
 }

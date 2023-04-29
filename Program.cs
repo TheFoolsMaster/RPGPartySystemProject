@@ -12,6 +12,14 @@
             Wizard hero5 = new Wizard("Merlin",12,56,124);
             Initials hero6 = new Initials("Jorg",98,66,43);
 
+            Console.WriteLine(hero1);
+            Console.WriteLine(hero2);
+            Console.WriteLine(hero3);
+            Console.WriteLine(hero4);
+            Console.WriteLine(hero5);
+            Console.WriteLine(hero6);
+
+
             HeroGorup foo = new HeroGorup("Druzyna pierscienia");
             foo.AddMember(hero1);
             foo.AddMember(hero2);
@@ -19,6 +27,10 @@
             foo.AddMember(hero4);
             foo.AddMember(hero5);
             foo.AddMember(hero6);
+            Console.WriteLine( );
+            Console.WriteLine(hero2);
+            Console.WriteLine((Wizard)hero2);
+            Console.WriteLine(  );
             Console.WriteLine(foo[0].ToString());
             Console.WriteLine(foo[0].ModifyHeroHealth(0));
             Console.WriteLine(foo.ToString());
