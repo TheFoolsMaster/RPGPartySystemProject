@@ -34,13 +34,6 @@
             Console.WriteLine(foo.ToString());
 
 
-
-
-
-
-
-
-
             Console.WriteLine( );
             Console.WriteLine(hero2);
             Console.WriteLine((Wizard)hero2);
