@@ -21,7 +21,7 @@ namespace VistulaProjekt2
         public Wizard()
         {
             HeroName = "Xardas";
-            HeroHealth = 100;
+            HeroHealth = 1;
             HeroStrenght = random.Next(1, 1 * 6 + 1);
             this.Mana = random.Next(2, 2 * 6 + 1);
         }

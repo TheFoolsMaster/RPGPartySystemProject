@@ -20,7 +20,7 @@ namespace VistulaProjekt2
         public Initials()
         {
             HeroName = "Student";
-            HeroHealth = 100;
+            HeroHealth = 1;
             HeroStrenght = random.Next(0,2*6+1);
             age = 25;
         }

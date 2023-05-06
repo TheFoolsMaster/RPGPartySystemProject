@@ -26,6 +26,7 @@
             Console.WriteLine(foo[3].HeroStrenght);
             Console.WriteLine(foo[3].HeroHealth);
             Console.WriteLine(foo[3].AttackPower());
+            foo[3].ModifyHeroHealth(-200);
 
 
 

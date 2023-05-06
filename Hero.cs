@@ -44,7 +44,6 @@ namespace VistulaProjekt2
         public float ModifyHeroHealth (int value)
         {
             float temp = (float)value/100;
-            Console.WriteLine(temp);
             if (HeroHealth+ temp < 0)
                 return HeroHealth = 0;
             else if (HeroHealth + temp > 100)
