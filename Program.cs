@@ -12,26 +12,34 @@
             Wizard hero5 = new Wizard("Merlin",12,56,124);
             Initials hero6 = new Initials("Jorg",98,66,43);
 
-            Console.WriteLine(hero1);
-            Console.WriteLine(hero2);
-            Console.WriteLine(hero3);
-            Console.WriteLine(hero4);
-            hero4.ModifyHeroHealth(62);
-            Console.WriteLine(hero4);
-            Console.WriteLine(hero5);
-            Console.WriteLine(hero6);
-
-
             HeroGorup foo = new HeroGorup("Druzyna pierscienia");
-            foo.AddMember(hero1);
-            foo.AddMember(hero2);
-            foo.AddMember(hero3);
-            foo.AddMember(hero4);
-            foo.AddMember(hero5);
-            foo.AddMember(hero6);
-
-            foo[3].ModifyHeroHealth(-62);
+            foo.AddMember(hero1, hero2, hero3, hero4, hero5, hero6);
+            //foo.AddMember(hero1);
+            //foo.AddMember(hero2);
+            //foo.AddMember(hero3);
+            //foo.AddMember(hero4);
+            //foo.AddMember(hero5);
+            //foo.AddMember(hero6);
+            foo[3].ModifyHeroHealth(-61);
             Console.WriteLine(foo.ToString());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             Console.WriteLine( );
@@ -41,17 +49,23 @@
             Console.WriteLine(foo[0].ToString());
             Console.WriteLine(foo[0].ModifyHeroHealth(0));
             Console.WriteLine(foo.ToString());
-            Console.WriteLine(foo.AllAttackInfo());
+            Console.WriteLine(foo.GroupAttackInfo());
             Console.WriteLine(foo[0].ToString());
 
+
+            Console.WriteLine("modifyWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
+            Console.WriteLine(foo[4].ToString());
+            HeroGorup fooClone = (HeroGorup)foo.Clone();
+            Console.WriteLine(foo);
+            Console.WriteLine(fooClone);
+            foo[4].ModifyHeroHealth(+98);
+            fooClone[4].HeroName = "Gerwazy";
+            Console.WriteLine(fooClone[4].ToString());
+            Console.WriteLine(foo[4].ToString());
+            Console.WriteLine(foo);
+            Console.WriteLine(fooClone);
 
             Console.WriteLine(  );
-            Console.WriteLine(foo[0].ToString());
-            HeroGorup fooClone = (HeroGorup)foo.Clone();
-            foo[0].ModifyHeroHealth(-98);
-            fooClone[0].HeroName = "Gerwazy";
-            Console.WriteLine(fooClone[0].ToString());
-
             fooClone[0].HeroName = "Arn";
             Console.WriteLine(foo[0].ToString());
             Console.WriteLine(fooClone[0].ToString());

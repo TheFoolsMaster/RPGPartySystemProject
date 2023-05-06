@@ -26,12 +26,19 @@ namespace VistulaProjekt2
         {
             group.Add(newMember);
         }
-        public int AllAttackInfo()
+        public void AddMember(params Hero[] newMember)
+        {
+            for (int i = 0; i < newMember.Length; i++)
+            {
+                group.Add(newMember[i]);
+            }
+        }
+        public int GroupAttackInfo()
         {
             int allStrenght = 0;
             foreach (var hero in group)
             {
-                allStrenght += hero.HeroStrenght;
+                allStrenght += hero.AttackPower();
             }
             return allStrenght;
         }
@@ -79,7 +86,7 @@ namespace VistulaProjekt2
                 if (i+1 != group.Count)
                     peeps += ", ";
             }
-            return $"Group name: {GroupName}, party attack power: {AllAttackInfo()}, party members: {peeps}";
+            return $"Group name: {GroupName}, party attack power: {GroupAttackInfo()}, party members: {peeps}";
         }
     }
 }

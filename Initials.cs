@@ -22,7 +22,7 @@ namespace VistulaProjekt2
             heroName = "Student";
             heroHealth = 100;
             heroStrenght = random.Next(0,2*6+1);
-            age = 25;
+            age = 21;
         }
         public override string ToString()
         {
