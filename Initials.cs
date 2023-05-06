@@ -19,9 +19,9 @@ namespace VistulaProjekt2
         }
         public Initials()
         {
-            heroName = "Student";
-            heroHealth = 100;
-            heroStrenght = random.Next(0,2*6+1);
+            HeroName = "Student";
+            HeroHealth = 100;
+            HeroStrenght = random.Next(0,2*6+1);
             age = 21;
         }
     }

@@ -10,7 +10,6 @@ namespace VistulaProjekt2
 {
     internal class HeroGorup : ICloneable
     {
-        public int lootest = 0;
         private string groupName;
         public string GroupName
         {
@@ -33,9 +32,9 @@ namespace VistulaProjekt2
                 group.Add(newMember[i]);
             }
         }
-        public int GroupAttackInfo()
+        public float GroupAttackInfo()
         {
-            int allStrenght = 0;
+            float allStrenght = 0;
             foreach (var hero in group)
             {
                 allStrenght += hero.AttackPower();

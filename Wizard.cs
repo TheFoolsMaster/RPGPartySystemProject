@@ -20,14 +20,14 @@ namespace VistulaProjekt2
         }
         public Wizard()
         {
-            heroName = "Xardas";
-            heroHealth = 100;
-            heroStrenght = random.Next(0, 1 * 6 + 1);
-            this.mana = random.Next(0, 2 * 6 + 1);
+            HeroName = "Xardas";
+            HeroHealth = 100;
+            HeroStrenght = random.Next(0, 1 * 6 + 1);
+            this.Mana = random.Next(0, 2 * 6 + 1);
         }
-        public override int AttackPower()
+        public override float AttackPower()
         {
-            return (mana + heroStrenght)*heroHealth;
+            return (Mana + HeroStrenght)*HeroHealth;
         }
     }
 }

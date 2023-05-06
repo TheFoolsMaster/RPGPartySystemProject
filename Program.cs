@@ -14,12 +14,7 @@
 
             HeroGorup foo = new HeroGorup("Druzyna pierscienia");
             foo.AddMember(hero1, hero2, hero3, hero4, hero5, hero6);
-            //foo.AddMember(hero1);
-            //foo.AddMember(hero2);
-            //foo.AddMember(hero3);
-            //foo.AddMember(hero4);
-            //foo.AddMember(hero5);
-            //foo.AddMember(hero6);
+
             foo[3].ModifyHeroHealth(-61);
             Console.WriteLine(foo.ToString());
 
@@ -32,14 +27,15 @@
 
 
 
-
-
-
-
-
-
-
-
+            Console.WriteLine();
+            Console.WriteLine("Heros");
+            Console.WriteLine(hero1);
+            Console.WriteLine(hero2);
+            Console.WriteLine(hero3);
+            Console.WriteLine(hero4);
+            Console.WriteLine(hero5);
+            Console.WriteLine(hero6);
+            Console.WriteLine();
 
 
             Console.WriteLine( );
@@ -72,14 +68,6 @@
             Console.WriteLine(  );
             Console.WriteLine(foo.ToString());
             Console.WriteLine(fooClone.ToString());
-
-
-
-            foo.lootest = 4214;
-            Console.WriteLine(foo.lootest);
-            Console.WriteLine(fooClone.lootest);
-
-
         }
     }
 }

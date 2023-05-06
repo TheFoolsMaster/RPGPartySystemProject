@@ -17,7 +17,7 @@ namespace VistulaProjekt2
             HeroHealth = 100;
             HeroStrenght = random.Next(0, 3 * 6 + 1);
         }
-        public override int AttackPower()
+        public override float AttackPower()
         {
             if (HeroHealth < 5)
                 return HeroStrenght;

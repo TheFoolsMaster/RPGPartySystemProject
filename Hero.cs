@@ -11,17 +11,17 @@ namespace VistulaProjekt2
     {
         #region Properites
 
-        protected string? heroName;
-        protected int heroHealth; // wip
-        protected int heroStrenght;
+        private string? heroName;
+        private float heroHealth; //stored in % range of value from 0 to 1
+        private int heroStrenght;
 
         public string? HeroName
         {
             get { return heroName; } set { heroName = value; }
         }
-        public int HeroHealth
+        public float HeroHealth
         {
-            get { return heroHealth; } set { heroHealth = value;}
+            get { return heroHealth*100; } set { heroHealth = value/100;}
         }
         public int HeroStrenght
         {
@@ -36,11 +36,11 @@ namespace VistulaProjekt2
         }
         protected Hero(string heroName, int heroHealth, int heroStrenght)
         {
-            this.heroName = heroName;
-            this.heroHealth = heroHealth;
-            this.heroStrenght = heroStrenght;
+            this.HeroName = heroName;
+            this.HeroHealth = heroHealth;
+            this.HeroStrenght = heroStrenght;
         }
-        public int ModifyHeroHealth (int value)
+        public float ModifyHeroHealth (int value)
         {
             if (HeroHealth+value < 0)
                 return HeroHealth = 0;
@@ -49,13 +49,13 @@ namespace VistulaProjekt2
             else
                 return HeroHealth += value;
         }
-        public virtual int AttackPower()
+        public virtual float AttackPower()
         {
             return (HeroHealth*HeroStrenght);
         }
         public override string ToString()
         {
-            return $"{heroName},{heroHealth}%,{AttackPower()}";
+            return $"{HeroName},{HeroHealth}%,{AttackPower()}";
         }
 
         public object Clone()
