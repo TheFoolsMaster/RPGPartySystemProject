@@ -23,7 +23,10 @@ namespace VistulaProjekt2
             HeroName = "Xardas";
             HeroHealth = 1;
             HeroStrenght = random.Next(1, 1 * 6 + 1);
-            this.Mana = random.Next(2, 2 * 6 + 1);
+            for (int dice = 0; dice < 2; dice++)
+            {
+                HeroStrenght = +random.Next(1, 6 + 1);
+            }
         }
         public override float AttackPower()
         {
