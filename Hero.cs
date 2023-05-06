@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection.PortableExecutable;
 using System.Text;
@@ -21,7 +22,7 @@ namespace VistulaProjekt2
         }
         public float HeroHealth
         {
-            get { return heroHealth*100; } set { heroHealth = value/100;}
+            get { return heroHealth; } set { heroHealth = value;}
         }
         public int HeroStrenght
         {
@@ -37,17 +38,19 @@ namespace VistulaProjekt2
         protected Hero(string heroName, int heroHealth, int heroStrenght)
         {
             this.HeroName = heroName;
-            this.HeroHealth = heroHealth;
+            this.HeroHealth = (float)heroHealth/100;
             this.HeroStrenght = heroStrenght;
         }
         public float ModifyHeroHealth (int value)
         {
-            if (HeroHealth+value < 0)
+            float temp = (float)value/100;
+            Console.WriteLine(temp);
+            if (HeroHealth+ temp < 0)
                 return HeroHealth = 0;
-            else if (HeroHealth + value > 100)
+            else if (HeroHealth + temp > 100)
                 return HeroHealth = 100;
             else
-                return HeroHealth += value;
+                return HeroHealth = (float)Math.Round(HeroHealth + temp, 2);
         }
         public virtual float AttackPower()
         {
@@ -55,7 +58,7 @@ namespace VistulaProjekt2
         }
         public override string ToString()
         {
-            return $"{HeroName},{HeroHealth}%,{AttackPower()}";
+            return $"{HeroName},{HeroHealth*100}%,{AttackPower()}";
         }
 
         public object Clone()

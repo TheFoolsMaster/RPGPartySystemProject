@@ -22,7 +22,7 @@ namespace VistulaProjekt2
             HeroName = "Student";
             HeroHealth = 100;
             HeroStrenght = random.Next(0,2*6+1);
-            age = 21;
+            age = 25;
         }
     }
 }
