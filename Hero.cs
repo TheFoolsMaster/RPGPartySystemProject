@@ -13,7 +13,7 @@ namespace VistulaProjekt2
         #region Properites
 
         private string? heroName;
-        private float heroHealth; //stored in % range of value from 0 to 1
+        private float heroHealth; //stored in % ,range of value from 0 to 1
         private int heroStrenght;
 
         public string? HeroName
