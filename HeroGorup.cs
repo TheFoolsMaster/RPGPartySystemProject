@@ -44,27 +44,13 @@ namespace VistulaProjekt2
 
         public object Clone()
         {
-            //HeroGorup clone = (HeroGorup)this.MemberwiseClone();
             HeroGorup clone = new HeroGorup(this.GroupName); 
             clone.groupName = this.groupName;
-            //clone.group = this.group.ToList();
-            //clone.group = this.group.ToList();
-            //clone.group = this.group.ConvertAll(idk => (Hero)(book.title));
-            //foreach(var hero in group)
-            //clone.group.Add(new Hero());
-
-            //group = new List<Hero>(this.group.Count);
 
             foreach(var hero in this.group)
             {
                 clone.group.Add((Hero)hero.Clone());
             }
-
-            //this.group.ForEach((item) =>
-            //{
-            //    clone.group.Add((Hero)item.Clone());
-            //});
-
 
             return clone;
         }
