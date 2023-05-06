@@ -29,9 +29,5 @@ namespace VistulaProjekt2
         {
             return (mana + heroStrenght)*heroHealth;
         }
-        public override string ToString()
-        {
-            return base.ToString()+$",{Mana}";
-        }
     }
 }

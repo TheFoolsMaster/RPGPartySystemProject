@@ -24,9 +24,5 @@ namespace VistulaProjekt2
             else
                 return HeroHealth * HeroStrenght;
         }
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }
