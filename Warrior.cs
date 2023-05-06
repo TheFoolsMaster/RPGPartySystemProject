@@ -17,7 +17,7 @@ namespace VistulaProjekt2
             HeroHealth = 1;
             for(int dice = 0; dice < 3;dice++)
             {
-                HeroStrenght =+ random.Next(1,6 + 1);
+                HeroStrenght += random.Next(1,6 + 1);
             }
 
         }
