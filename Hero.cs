@@ -6,7 +6,7 @@ using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VistulaProjekt2
+namespace RPGPartySystemProject
 {
     abstract class Hero : ICloneable
     {

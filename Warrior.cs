@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VistulaProjekt2
+namespace RPGPartySystemProject
 {
     internal class Warrior : Hero
     {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace VistulaProjekt2
+namespace RPGPartySystemProject
 {
     internal class HeroGorup : ICloneable
     {

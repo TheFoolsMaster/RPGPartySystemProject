@@ -1,4 +1,4 @@
-﻿namespace VistulaProjekt2
+﻿namespace RPGPartySystemProject
 {
     internal class Program
     {
