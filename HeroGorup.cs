@@ -71,7 +71,7 @@ namespace RPGPartySystemProject
                 if (i+1 != group.Count)
                     peeps += ", ";
             }
-            return $"Group name: {GroupName}, party attack power: {GroupAttackInfo()}, party members: {peeps}";
+            return $"Group name: {GroupName}, party attack power: {GroupAttackInfo()}, party members: {peeps}\n";
         }
     }
 }
