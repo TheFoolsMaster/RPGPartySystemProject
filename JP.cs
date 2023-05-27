@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace RPGPartySystemProject
 {
-    internal class Initials : Hero
+    internal class JP : Hero
     {
         private int age;
         public int Age
         {
             get { return age; } set { age = value; }
         }
-        public Initials(string heroName, int heroHealth, int heroStrenght,int age) : base(heroName, heroHealth, heroStrenght)
+        public JP
+            (string heroName, int heroHealth, int heroStrenght,int age) : base(heroName, heroHealth, heroStrenght)
         {
             this.age=age;
         }
-        public Initials()
+        public JP()
         {
             HeroName = "Student";
             HeroHealth = 1;
