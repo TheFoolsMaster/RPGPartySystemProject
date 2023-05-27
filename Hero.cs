@@ -47,7 +47,7 @@ namespace RPGPartySystemProject
             if (HeroHealth+ temp < 0)
                 return HeroHealth = 0;
             else if (HeroHealth + temp > 100)
-                return HeroHealth = 100;
+                return HeroHealth = 1;
             else
                 return HeroHealth = (float)Math.Round(HeroHealth + temp, 2);
         }
